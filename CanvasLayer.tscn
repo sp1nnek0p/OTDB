@@ -49,7 +49,7 @@ margin_bottom = 383.0
 custom_colors/font_color_hover = Color( 0.0666667, 0.643137, 0.898039, 1 )
 custom_colors/font_color_pressed = Color( 0.658824, 0.823529, 0.0627451, 1 )
 custom_fonts/font = ExtResource( 2 )
-text = "0"
+text = "1"
 
 [node name="opt2" type="Button" parent="."]
 margin_left = 191.0
@@ -59,6 +59,7 @@ margin_bottom = 443.0
 custom_colors/font_color_hover = Color( 0.0666667, 0.643137, 0.898039, 1 )
 custom_colors/font_color_pressed = Color( 0.658824, 0.823529, 0.0627451, 1 )
 custom_fonts/font = ExtResource( 2 )
+text = "2"
 
 [node name="opt3" type="Button" parent="."]
 margin_left = 191.0
@@ -68,6 +69,7 @@ margin_bottom = 503.0
 custom_colors/font_color_hover = Color( 0.0666667, 0.643137, 0.898039, 1 )
 custom_colors/font_color_pressed = Color( 0.658824, 0.823529, 0.0627451, 1 )
 custom_fonts/font = ExtResource( 2 )
+text = "3"
 
 [node name="opt4" type="Button" parent="."]
 margin_left = 191.0
@@ -77,6 +79,7 @@ margin_bottom = 563.0
 custom_colors/font_color_hover = Color( 0.0666667, 0.643137, 0.898039, 1 )
 custom_colors/font_color_pressed = Color( 0.658824, 0.823529, 0.0627451, 1 )
 custom_fonts/font = ExtResource( 2 )
+text = "4"
 
 [node name="DisplayScore" type="Label" parent="."]
 margin_left = 640.0
@@ -116,7 +119,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

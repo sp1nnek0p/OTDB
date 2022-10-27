@@ -34,6 +34,7 @@ func next_question():
 		opt3.text = question_bank[number][1][2]
 		opt4.text = question_bank[number][1][3]
 	else:
+		display_score.text = 'Score : ' + str(score_val)
 		question_textbox.text = 'You Got! ' + str(score_val) + '/100'
 		popup_dialog.dialog_text = 'You final score is! ' + str(score_val) + '/100'
 		popup_dialog.popup()
