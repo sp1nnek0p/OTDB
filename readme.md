@@ -11,5 +11,6 @@
 ![Questions with Answers](/screenshots/screen1.png "Screenshot 1")
 ![Showing the Dialog for incorrect answers](/screenshots/screen2.png "Screenshot 2")
 ![Showing the Dialog for correct answers](/screenshots/screen3.png "Screenshot 3")
+![Showing the Dialog to restart game](/screenshots/screen4.png "Screenshot 4")
 
 KEEP CHECKING BACK FOR UPDATES
