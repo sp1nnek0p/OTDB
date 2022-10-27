@@ -1,5 +1,5 @@
 ## Simple Quizgame
-> This is not complete and you are more than welcome to download and reuse any of my code written for this project. But do check back I would like to keep improving the game itself
+> This is not complete and you are more than welcome to download and reuse any of my code written for this project. But do check back I would like to keep improving the game.
 
 
 ## How does it currently work?
