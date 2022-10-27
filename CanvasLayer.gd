@@ -7,6 +7,7 @@ onready var opt3 = get_node("opt3")
 onready var opt4 = get_node("opt4")
 onready var display_score = get_node("DisplayScore")
 onready var popup_dialog = get_node("AcceptDialog")
+onready var play_again = get_node("ConfirmationDialog")
 onready var category = get_node("Category")
 onready var difficulty = get_node("Difficulty")
 
@@ -18,6 +19,7 @@ var score_val = 0
 func _ready():
 	# Get 10 questions from the OpenTDB on Startup
 	$HTTPRequest.request("https://opentdb.com/api.php?amount=10&type=multiple")
+	play_again.get_cancel().connect("pressed", self, "_cancelled")
 	pass # Replace with function body.
 
 
@@ -53,6 +55,7 @@ func check_answers(obj):
 func shuffle_list(list):
 	# Shuffle the answers so they are never in the same order
 	# Because I append the correct answer to the list for output
+	# to the answers
 	var shuffled_list = []
 	var index_list = range(list.size())
 	for i in range(list.size()):
@@ -107,6 +110,16 @@ func _on_opt4_pressed():
 
 
 func _on_AcceptDialog_confirmed():
-	number += 1
-	next_question()
+	if number < 10:
+		number += 1
+		next_question()
+	else:
+		play_again.popup()
 	
+
+func _on_ConfirmationDialog_confirmed():
+	get_tree().reload_current_scene()
+
+
+func _cancelled():
+	get_tree().quit()
