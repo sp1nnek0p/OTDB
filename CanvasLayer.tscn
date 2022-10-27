@@ -13,8 +13,8 @@ __meta__ = {
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1027.0
-margin_bottom = 598.0
+margin_right = 1025.0
+margin_bottom = 600.0
 color = Color( 0.105882, 0.0862745, 0.341176, 1 )
 
 [node name="Button" type="Button" parent="."]
@@ -23,6 +23,13 @@ margin_left = 27.0
 margin_top = 27.0
 margin_right = 63.0
 margin_bottom = 60.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 181.0
+margin_top = 123.0
+margin_right = 855.0
+margin_bottom = 319.0
+color = Color( 0, 0, 0, 1 )
 
 [node name="Question" type="Label" parent="."]
 margin_left = 191.0
@@ -97,7 +104,6 @@ custom_fonts/font = ExtResource( 2 )
 text = "Dificulty"
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
