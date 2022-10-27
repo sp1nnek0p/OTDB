@@ -6,7 +6,7 @@ onready var opt2 = get_node("opt2")
 onready var opt3 = get_node("opt3")
 onready var opt4 = get_node("opt4")
 onready var display_score = get_node("DisplayScore")
-onready var popup_dialog = get_node("ConfirmationDialog")
+onready var popup_dialog = get_node("AcceptDialog")
 onready var category = get_node("Category")
 onready var difficulty = get_node("Difficulty")
 
@@ -22,7 +22,6 @@ func _ready():
 
 
 func next_question():
-
 	if number < 10:
 		display_score.text = 'Score : ' + str(score_val)
 		category.text = 'Category : ' + question_bank[number][3]
@@ -44,15 +43,13 @@ func check_answers(obj):
 		popup_dialog.dialog_text = "That was correct! it was infact : " + question_bank[number][2] 
 		popup_dialog.popup()
 		score_val += 10
-		number += 1
-		next_question()
+		
+
 	else:
 		popup_dialog.dialog_text = "That was incorrect! the correct answer is : " + question_bank[number][2] 
 		popup_dialog.popup()
-		number += 1
-		next_question()
 
-
+		
 func shuffle_list(list):
 	# Shuffle the answers so they are never in the same order
 	# Because I append the correct answer to the list for output
@@ -108,3 +105,8 @@ func _on_opt3_pressed():
 func _on_opt4_pressed():
 	check_answers(opt4)
 
+
+func _on_AcceptDialog_confirmed():
+	number += 1
+	next_question()
+	

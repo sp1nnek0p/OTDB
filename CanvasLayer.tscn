@@ -103,19 +103,17 @@ margin_bottom = 108.0
 custom_fonts/font = ExtResource( 2 )
 text = "Dificulty"
 
-[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -100.0
-margin_top = -35.0
-margin_right = 100.0
-margin_bottom = 35.0
-window_title = "Information"
-dialog_text = "You Won The Game!
-100/100"
-dialog_autowrap = true
+margin_left = -41.5
+margin_top = -29.0
+margin_right = 41.5
+margin_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
@@ -123,3 +121,4 @@ dialog_autowrap = true
 [connection signal="pressed" from="opt2" to="." method="_on_opt2_pressed"]
 [connection signal="pressed" from="opt3" to="." method="_on_opt3_pressed"]
 [connection signal="pressed" from="opt4" to="." method="_on_opt4_pressed"]
+[connection signal="confirmed" from="AcceptDialog" to="." method="_on_AcceptDialog_confirmed"]
